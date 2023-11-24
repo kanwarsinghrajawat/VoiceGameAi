@@ -107,7 +107,9 @@ function updateGrammar() {
 // make call to Voicegain API to get websocket URLs
 export const connectWebsocket = async () => {
   const audioContext = new AudioContext();
-  const websocketApiUrl = new URL("fghjkl");
+  const websocketApiUrl = new URL(
+    "https://api.voicegain.ai/v1/asr/recognize/async"
+  );
   try {
     // if (fetchTempJwtResponse.ok) {
     jwtToken =
