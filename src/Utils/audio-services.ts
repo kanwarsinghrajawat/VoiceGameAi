@@ -6,7 +6,9 @@ export class AudioCaptureStreamingService {
     const webSocket = new WebSocket(webSocketUrl);
     webSocket.addEventListener("close", (event) => console.debug(event));
     webSocket.addEventListener("message", (event) => console.debug(event));
-    webSocket.addEventListener("open", (event:any) => {
+    webSocket.addEventListener("open", (event: any) => {
+      console.log("WebSocket opened", event);
+
       AudioCaptureService.start(
         (audioProcessingEvent: AudioProcessingEvent) => {
           webSocket.send(audioProcessingEvent.inputBuffer.getChannelData(0));
