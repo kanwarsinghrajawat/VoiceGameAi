@@ -1,0 +1,87 @@
+// MOdal
+.modal__overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.6);
+  .model__content {
+    background-color: black;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    min-width: 300px;
+    padding: 1rem;
+    border: 2px solid #01e4da;
+  }
+}
+
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.modal-exit {
+  opacity: 1;
+}
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+// Restart Modal
+.restartModal {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+  }
+  .modalBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    .saveBtn {
+      background-color: black;
+      color: white;
+    }
+    .yesBtn {
+      text-decoration: none;
+      color: white;
+      text-align: center;
+    }
+    .widtBtn {
+      width: 8rem;
+      border: 2px solid #01e4da;
+    }
+  }
+}
+
+.popup {
+  .popup-content {
+    text-align: center;
+    .modalBtns {
+      background-color: #365bcd;
+      display: inline-block;
+      padding: 1rem 5rem;
+      .widtBtn {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.settings__container {
+  background-color: black;
+  padding: 2rem;
+  border-radius: 0rem;
+  width: 100%;
+  height: 100vh;
+}
+
+.settings {
+  border-radius: 0.5rem;
+  // opacity: 0.5;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  padding: 2rem;
+  box-shadow: inset 0 0 40px 35px rgba(2, 184, 171, 0.5),
+    0 0 44px 16px rgba(2, 184, 171, 0.5);
+  border: 2px solid #01e4da;
+  box-sizing: border-box;
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 5rem 0;
+  }
+
+  .controls {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem;
+    box-shadow: inset 0 0 40px 10px rgba(2, 184, 171, 0.5),
+      0 0 44px 16px rgba(2, 184, 171, 0.5);
+    border: 2px solid #01e4da;
+    .grid--size {
+      .control--btns {
+        color: black;
+      }
+    }
+    .selectBoxStyles {
+      padding: 0.8rem;
+      color: black;
+      width: 15rem;
+      color: white;
+      background-color: black;
+      border: 2px solid #01e4da;
+      option {
+        color: white;
+        border: 2px solid #01e4da;
+      }
+    }
+
+    .saveBtn {
+      background-color: black;
+      color: white;
+      width: 15rem;
+      border: 2px solid #01e4da;
+    }
+    .clearBtn {
+      background-color: black;
+      color: white;
+      width: 15rem;
+      border: 2px solid #01e4da;
+    }
+  }
+  .sideButtons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    float: right;
+    align-items: center;
+    right: 7rem;
+    top: 8rem;
+  }
+}
+
+h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+
+  ::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: 10px;
+    transform: rotate(55deg);
+  }
+}
+#text3d {
+  color: #70869d;
+  letter-spacing: 0.15em;
+  text-shadow: -1px -1px 1px #efede3, 0px 1px 0 #2e2e2e, 0px 2px 0 #2c2c2c,
+    0px 3px 0 #2a2a2a, 0px 4px 0 #282828, 0px 5px 0 #262626, 0px 6px 0 #242424,
+    0px 7px 0 #222, 0px 8px 0 #202020, 0px 9px 0 #1e1e1e, 0px 10px 0 #1c1c1c,
+    0px 11px 0 #1a1a1a, 0px 12px 0 #181818, 0px 13px 0 #161616,
+    0px 14px 0 #141414, 0px 15px 0 #121212, 2px 20px 5px rgba(0, 0, 0, 0.9),
+    5px 23px 5px rgba(0, 0, 0, 0.3), 8px 27px 8px rgba(0, 0, 0, 0.5),
+    8px 28px 35px rgba(0, 0, 0, 0.9);
+}
+.check {
+  --bg: black;
+  --text-color: #fff;
+  position: relative;
+  width: 15rem;
+  border: 2px solid #01e4da;
+  background: var(--bg);
+  color: var(--text-color);
+  padding: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+  border-radius: 5px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  box-shadow: #01e4da 0px 9px 2px, #000 0px 8px 5px;
+}
+.check:hover {
+  opacity: 1;
+}
+.check:active {
+  top: 4px;
+  box-shadow: #01e4da 0px 3px 2px, #000 0px 3px 5px;
+}
