@@ -40,10 +40,11 @@ const Home = () => {
   const [hasReceivedCommand, setHasReceivedCommand] = useState(false); // Track if a command has been received
   const { gridSize, speed } = useContext(GridContext);
   const { width, height } = gridSize;
-
+  console.log(hasReceivedCommand);
   // Generating Rows And columns for collector and object and checking that while generating they will not collide
   useEffect(() => {
     const { collectorObject, sweetCells } = generateCells({ width, height });
+    console.log(collectorObject);
     setPersonCell(personCell);
     setSweetCells(sweetCells);
   }, [width, height, setPersonCell, setSweetCells]);
@@ -170,8 +171,8 @@ const Home = () => {
       gridSize,
     };
     const updatedGameData = handleStoreGameData(gameData);
+    console.log(updatedGameData);
   }, [isGameFinished, time, gridSize]);
-
   // to start the game
   const startGame = () => {
     console.log("Game Started....");
